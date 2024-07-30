@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Manager</title>
+</head>
+<style>
+    body {
+        font-family: Arial;
+        margin: 0;
+        background-color: #f2f2f2;
+    }
+
+    .container {
+        width: 110%;
+        max-width: 400px;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        padding: 30px;
+    }
+
+    .menubutton,
+    .profile-button {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .tabs {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 3 10px;
+    }
+
+    .tab {
+        background: none;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+    }
+
+    .tab.active {
+        border-bottom: 2px solid white;
+    }
+
+    .main-button {
+        background-color: #000;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .main-button:hover {
+        background-color: #333;
+    }
+
+    .content {
+        display: none;
+        padding: 20px;
+        background-color: #f2f2f2;
+        height: calc(100vh - 60px);
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #fff;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        background-color: #575757;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 36px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <button id="button" class="menubutton">&#9776;</button>
+            <div class="tabs">
+                <button class="tab" onclick="tabOpen(event, 'addBill')">Add Bill</button>
+                <button class="tab" onclick="tabOpen(event, 'reminder')">Reminder</button>
+                <button class="tab" onclick="tabOpen(event, 'paidBill')">Paid Bill</button>
+            </div>
+            <button class="profile-button">&#128100;</button>
+        </div>
+        <div id="addBill" class="content">
+            <button class="main-button">Add Bill &#43;</button>
+        </div>
+    </div>
+    <div id="sideNav" class="sidenav">
+        <a class="closebtn" onclick="navClose()">&times;</a>
+        <a href="#">Add Bill</a>
+        <a href="#">Reminder</a>
+        <a href="payment.html">Payment</a>
+        <a href="#">Setting</a>
+    </div>
+    </div>
+
+    <script>
+        function tabOpen(evt, name) {
+            document.getElementById(name).style.display = "block";
+            evt.currentTarget.className += "active";
+        }
+        document.getElementById("button").addEventListener("click", function () {
+            document.getElementById("sideNav").style.width = "200px";
+        });
+
+        function navClose() {
+            document.getElementById("sideNav").style.width = "0";
+        }
+
+        document.getElementsByClassName("tab")[0].click();
+    </script>
+</body>
+
+</html>
