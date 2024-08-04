@@ -13,7 +13,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f2f2f2;
+            background-color: lightgray;
         }
 
         .container {
@@ -21,7 +21,7 @@
             height: 80%;
             max-width: 350px;
             padding: 5px;
-            background: #fff;
+            background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             text-align: center;
@@ -37,28 +37,19 @@
             width: 50%;
         }
 
-        .back-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 20px;
-            text-decoration: none;
-            color: #000;
-        }
     </style>
 </head>
 
 <body>
-    <a href="scanQR.html" class="back-button">&larr;</a>
     <div class="container">
         <br><br><br>
-        <img src="tick.png" width="80px" height="80px">
-        <p>Successfully Transfer</p>
+        <img src="/images/tick.png" width="80px" height="80px">
+        <p>Payment Successfull</p>
         <p>Amount:          $400</p>
         <p>-------------------------------------</p>
         <p>To:<br>Razer Merchant Services<br>Mobile +65 82329432</p>
         <p>Reference No:<br>M9123456789DC12</p>
-        <button type="button" class="btn" onclick="location.href='menu.html'">Back to Homepage</button>
+        <button type="button" class="btn" onclick="location.href='paidBills.html'">See payment history</button>
     </div>
 </body>
 

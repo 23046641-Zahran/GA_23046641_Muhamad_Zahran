@@ -24,6 +24,27 @@
         margin: auto;
     }
 
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin-top: 20px;
+    }
+
+    .btn {
+        border-radius: 25px;
+        padding: 10px 50px;
+        border: none;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+    }
+
     .header {
         display: flex;
         justify-content: space-between;
@@ -31,18 +52,6 @@
         background-color: #333;
         color: white;
         padding: 30px;
-    }
-
-    .btn {
-        border-radius: 25px;
-        padding: 10px 145px;
-        border: none;
-        font-size: 16px;
-    }
-
-    .btn-primary {
-        background-color: #007bff;
-        color: white;
     }
 
     .menubutton,
@@ -139,15 +148,19 @@
                 <button class="tab" onclick="tabOpen(event, 'reminder')">Reminder</button>
                 <button class="tab" onclick="tabOpen(event, 'paidBill')">Paid Bill</button>
             </div>
-            <a class="navbar-brand" href="profile.html"><img src="images/profile.jpg" style="width:40px; height:40px;" class="rounded-5"></a>
+            <a class="navbar-brand" href="profileTopUp.html"><img src="images/profile.jpg"
+                    style="width:40px; height:40px;"></a>
         </div>
         <div id="addBill" class="content">
             <div class="button-container">
-                <a href="reminder.html" class="btn btn-primary">Water Bill</a>
-            </div><br><br>
+                <a href="reminderBill.html" class="btn btn-primary">Water Bill</a>
+            </div>
+            <div class="button-container">
+                <a href="reminderBill.html" class="btn btn-primary">Internet</a>
+            </div>
             <div class="button-container">
                 <a href="addBill.html" class="btn btn-primary">Add Bill &#43;</a>
-            </div>
+            </div><br><br>
         </div>
     </div>
     <div id="sideNav" class="sidenav">
@@ -155,8 +168,8 @@
         <a href="addBill.html">Add Bill</a>
         <a href="reminder.html">Reminder</a>
         <a href="payment.html">Payment</a>
-        <a href="paidBill.html">Paid Bills</a>
-        <a href="profile.html">Top-Up<br>Balance: $0</a>    
+        <a href="paidBill.html">Paid Bill</a>
+        <a href="profileTopUp.html">Top-Up<br>Balance: $400</a>
     </div>
 
     <script>

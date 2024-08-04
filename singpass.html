@@ -72,30 +72,30 @@
     <a href="login.html" class="back-button">&larr;</a>
     <div class="container">
         <h2>Create New Account</h2>
-        <form action="login.html">
+        <form action="index.html">
             <div class="form-group">
                 <label for="username"><b>Username:</b></label>
-                <input type="text" id="username" class="form-control" name="username" aria-describedby="text" placeholder="Name" required>
+                <input type="text" id="username" class="form-control" name="username" aria-describedby="text" value="Zahran" required>
             </div>
 
             <div class="form-group">
                 <label for="password"><b>Password:</b></label>
-                <input type="password" id="password" class="form-control" name="password" aria-describedby="text" placeholder="Password" required>
+                <input type="password" id="password" class="form-control" name="password" aria-describedby="text" value="Zahran123" required>
             </div>
 
             <div class="form-group">
                 <label for="email"><b>Email:</b></label>
-                <input type="email" id="email" class="form-control" name="email" aria-describedby="text" placeholder="Email" required>
+                <input type="email" id="email" class="form-control" name="email" aria-describedby="text" value="zahran@gmail.com" required>
             </div>
 
             <div class="form-group">
                 <label for="dob"><b>Date of Birth:</b></label>
-                <input type="date" id="dob" class="form-control" name="dob" aria-describedby="text" placeholder="DD/MM/YYYY" required>
-            </div>  
+                <input type="dob" id="dob" class="form-control" name="dob" aria-describedby="text" value="01/10/2024" required>
+            </div>
 
             <div class="form-group">
-                <button class="btn btn-success" type="submit" href="login.html"><b>Register</b></button>
-            </div>  
+                <button type="button" class="btn btn-primary" onclick="window.location.href='2FA.html';"><b>Log in with SingPass</b></button>
+            </div>       
         </form>
     </div>
 </body>

@@ -28,7 +28,7 @@
         height: 80%;
         max-width: 350px;
         padding: 10px;
-        background: #fff;
+        background: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         text-align: center;
@@ -53,15 +53,15 @@
         padding: 10px;
         margin-top: 8px;
         border: none;
-        border-bottom: 2px solid #000;
+        border-bottom: 2px solid black;
         font-size: 18px;
         outline: none;
     }
 
     .btn {
         width: 50%;
-        background: #000;
-        color: #fff;
+        background: black;
+        color: white;
         border: none;
         border-radius: 5px;
         padding: 10px;
@@ -69,21 +69,18 @@
         cursor: pointer;
         margin-bottom: 10px;
     }
-
 </style>
 
 <body>
     <div class="container">
-        <div class="login-box">
-            <h2>Two-Factor Authentication</h2>
-            <p>Please enter the 6 digit code that appear <br> in your authentication app</p>
-            <form>
-                <div class="textbox">
-                    <input type="number" placeholder="Verification Code" name="number" required>
-                </div>
-                <button type="button" class="btn" onclick="location.href='menu.html'">Verify Code</button>
-            </form>
-        </div>
+        <h2>Two-Factor Authentication</h2>
+        <p>Please enter the 6 digit code that appear <br> in your authentication app</p>
+        <form action="index.html">
+            <div class="textbox">
+                <input type="text" placeholder="Verification Code" pattern="\d{6}" title="Please enter your 6-digit number" required>
+            </div>
+            <button type="submit" class="btn">Verify Code</button>
+        </form>
     </div>
 </body>
 

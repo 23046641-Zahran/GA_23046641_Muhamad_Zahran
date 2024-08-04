@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charsetontent="width=device-width, initial-scale=1.0">
     <title>Payment</title>
     <style>
         body {
@@ -13,7 +12,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f2f2f2;
+            background-color: lightgray;
         }
 
         .container {
@@ -21,7 +20,7 @@
             height: 80%;
             max-width: 350px;
             padding: 5px;
-            background: #fff;
+            background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             text-align: center;
@@ -47,7 +46,7 @@
             left: 20px;
             font-size: 20px;
             text-decoration: none;
-            color: #000;
+            color: black;
         }
     </style>
 </head>
@@ -55,16 +54,24 @@
 <body>
     <a href="index.html" class="back-button">&larr;</a>
     <div class="container">
-        <h2>Payment</h2><br><br><br><br><br>
+        <h2>Payment</h2><br><br><br>
+        <div class="form-group">
+            <label for="internet-type">Bill Type</label>
+            <select id="internet-type">
+                <option value="Internet">Internet</option>
+                <option value="Medical">Water Bill</option>
+            </select>
+        </div>
+        <br><br>
         <p>Choose Payment Method</p>
         <label>
-            <input type="checkbox" name="tickOption"> PAYNOW <br>
-            <input type="checkbox" name="tickOption"> DBS PAYLAH <br>
-            <input type="checkbox" name="tickOption"> Credit/Debit Card <br>
-            <input type="checkbox" name="tickOption"> NETS <br>
-            <input type="checkbox" name="tickOption"> VISA <br>
-            <input type="checkbox" name="tickOption"> MasterCard <br>
-            <input type="checkbox" name="tickOption"> AMEX <br><br>
+            <a href="scanQR.html"> PAYNOW <br>
+            <a href="scanQR.html"> DBS PAYLAH <br>
+            <a href="paymentDetails.html"> Credit/Debit Card <br>
+            <a href="paymentDetails.html"> NETS <br>
+            <a href="paymentDetails.html"> VISA <br>
+            <a href="paymentDetails.html"> MasterCard <br>
+            <a href="paymentDetails.html"> AMEX <br><br>
         </label>
         <button type="button" class="btn" onclick="location.href='scanQR.html'">Proceed to Payment</button>
     </div>
