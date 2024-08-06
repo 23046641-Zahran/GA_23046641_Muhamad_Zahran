@@ -75,7 +75,7 @@
     <script>
         function updateDetails() {
           if (confirm('Are you sure you want update details?')) {
-            document.querySelector('.button').textContent = 'Updated';
+            document.querySelector('.btn').textContent = 'Updated';
           }
         }
     </script>
@@ -111,8 +111,8 @@
                     <label for="mobile">Mobile Number:</label>
                     <input type="tel" id="mobile" class="form-control" name="mobile" value="8742 3214">
                 </div>
-                <a href="#" class="button" onclick="updateDetails(); return false;">Update Details</a>
-            </form>
+                <a href="#" class="btn btn-primary" onclick="updateDetails(); return false;">Update Details</a>
+            </form><br>
             <button type="button" class="btn btn-danger" onclick="window.location.href='login.html';"><b>Logout</b></button>
         </div>
     </div>
